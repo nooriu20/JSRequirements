@@ -30,7 +30,6 @@ function isEqual(first, second) {
                       }
                   }
               });
-
               if (found == false) {
                   allItemsIsEqual = false;
                   result = false;
