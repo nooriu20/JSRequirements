@@ -41,15 +41,14 @@ function isEqual(first, second) {
   else if (typeof first == "object") {
       let firstKeys = (first ? Object.keys(first) : []);
       let secondKeys = (second ? Object.keys(second) : []);
-      let allKeys = firstKeys;
 
       if (!isEqual(firstKeys, secondKeys)) {
           return false;
       }
       else {
           let found = true;
-          for (c = 0; c < allKeys.length; c++) {
-              let key = allKeys[c];
+          for (c = 0; c < firstKeys.length; c++) {
+              let key = firstKeys[c];
               if (found == true) {          
                   if (typeof first[key] != typeof second[key]) {   
                       found = false;
