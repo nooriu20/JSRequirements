@@ -1,5 +1,5 @@
 function isEqual(first, second) {
-  let result = true;       
+  let result = true;
 
   if (typeof first != typeof second) {
       return false;
@@ -17,11 +17,11 @@ function isEqual(first, second) {
               let found = false;
               second.forEach(secArrItem => {
                   if (found == false) {
-                      if(isEqual(item, secArrItem)) {
+                      if (isEqual(item, secArrItem)) {
                           found = true;
                           let index = second.indexOf(secArrItem);
                           let temp = [];
-                          for (i = 0; i<second.length; i++) {
+                          for (let i = 0; i < second.length; i++) {
                               if (i != index) {
                                   temp.push(second[i]);
                               }
@@ -30,7 +30,7 @@ function isEqual(first, second) {
                       }
                   }
               });
-            
+
               if (found == false) {
                   allItemsIsEqual = false;
                   result = false;
@@ -47,12 +47,12 @@ function isEqual(first, second) {
       }
       else {
           let found = true;
-          for (c = 0; c < firstKeys.length; c++) {
+          for (let c = 0; c < firstKeys.length; c++) {
               let key = firstKeys[c];
-              if (found == true) {          
-                  if (typeof first[key] != typeof second[key]) {   
+              if (found == true) {
+                  if (typeof first[key] != typeof second[key]) {
                       found = false;
-                      result = false;                     
+                      result = false;
                       return false;
                   }
                   else {
